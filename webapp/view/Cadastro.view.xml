@@ -1,0 +1,72 @@
+<mvc:View
+	controllerName="com.coopersap.crudprodutos.controller.Cadastro"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:f="sap.ui.layout.form"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<Page id="page" title="{i18n>title}">
+		<content>
+			<f:SimpleForm
+			id="simpleFormChange"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				<Label 
+					text="ID"/>
+				<Input
+					id="ID"
+					value="{/ID}"/>
+					<Label 
+					text="Nome"/>
+				<Input
+					id="NOME"
+					value="{/Name}"/>
+				<Label 
+					text="Descrição"/>
+				<Input
+					id="DESCRICAO"
+					value="{/Description}"/>
+				<Label 
+					text="Preço"/>
+				<Input
+					id="PRECO"
+					value="{/Price}"/>
+				
+			</f:content>
+		</f:SimpleForm>
+		</content>
+		<footer>
+			<OverflowToolbar>
+			<Button
+					text="Voltar à Página Inicial"
+					press="onPressVoltar"/>
+				<ToolbarSpacer/>
+				<Button
+					text="Limpar campos"
+					press="onPressLimpar"
+				/>
+				<Button
+					text="Cadastrar"
+					press="onPressCadastrar"
+				/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>
